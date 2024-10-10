@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import './SearchList.css';  // Import the CSS
 
 const SearchList = ({ items }) => {
   const [searchTerm, setSearchTerm] = useState('');
@@ -12,24 +13,24 @@ const SearchList = ({ items }) => {
   );
 
   return (
-    <div>
-      <h1>Search List</h1>
+    <div className="search-list-container">
+      <h1 className="title">Search Filter</h1>
       <input
         type="text"
-        placeholder="Search..."
+        placeholder="Search items..."
         value={searchTerm}
         onChange={handleChange}
-        style={{ padding: '8px', marginBottom: '10px', width: '200px' }}
+        className="search-input"
       />
-      <ul>
+      <ul className="item-list">
         {filteredItems.length > 0 ? (
           filteredItems.map((item, index) => (
-            <li key={index} style={{ listStyleType: 'none', padding: '5px' }}>
+            <li key={index} className="list-item">
               {item}
             </li>
           ))
         ) : (
-          <li>No items found</li>
+          <li className="no-items">No items found</li>
         )}
       </ul>
     </div>
