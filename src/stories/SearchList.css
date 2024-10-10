@@ -1,5 +1,10 @@
-/* Container */
-.search-list-container {
+/* Apply box-sizing to all elements */
+* {
+    box-sizing: border-box;
+  }
+  
+  /* Container */
+  .search-list-container {
     max-width: 400px;
     margin: 50px auto;
     padding: 20px;
@@ -7,6 +12,7 @@
     border-radius: 10px;
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
     text-align: center;
+    overflow: hidden; /* Ensures any overflow is handled */
   }
   
   /* Title */
@@ -19,7 +25,7 @@
   
   /* Search Input */
   .search-input {
-    width: 100%;
+    width: 100%; /* Ensure it takes the full container width */
     padding: 12px 20px;
     margin-bottom: 20px;
     font-size: 16px;
@@ -67,5 +73,48 @@
     padding: 10px;
     font-family: 'Roboto', sans-serif;
     color: #666;
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .search-list-container {
+      max-width: 90%;
+      padding: 15px;
+    }
+  
+    .title {
+      font-size: 22px;
+    }
+  
+    .search-input {
+      font-size: 14px;
+      padding: 10px 15px;
+    }
+  
+    .list-item {
+      padding: 8px 15px;
+      font-size: 14px;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .search-list-container {
+      max-width: 100%;
+      padding: 10px;
+    }
+  
+    .title {
+      font-size: 20px;
+    }
+  
+    .search-input {
+      font-size: 12px;
+      padding: 8px 10px;
+    }
+  
+    .list-item {
+      padding: 6px 10px;
+      font-size: 12px;
+    }
   }
   
