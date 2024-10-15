@@ -48,10 +48,3 @@ export const Small = {
     label: 'Button',
   },
 };
-export const MediumLarge = {
-  args: {
-    size: 'large',
-    label: 'X-large',
-    primary: true
-  },
-};
