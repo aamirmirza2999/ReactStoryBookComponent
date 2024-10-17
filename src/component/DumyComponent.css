@@ -1,0 +1,45 @@
+.container {
+    display: flex;
+width: 343px;
+flex-direction: column;
+align-items: flex-start;
+gap: var(--S, 8px);
+  }
+
+  .inputWrapper {
+    display: flex;
+    height: 44px;
+    padding: 10px 16px;
+    align-items: center;
+    gap: var(--S, 8px);
+    align-self: stretch;
+    border-radius: 8px;
+    border: 1px solid #D7D8D6;
+    outline: none;
+    justify-content: space-between;
+  }
+  .linkTextWrapper {
+    display: flex;
+    height: var(--S, 24px);
+    justify-content: center;
+    align-items: center;
+
+  }
+
+  .linkText{
+    color: var(--primary-red, #DB0011);
+
+/* SAB English/Regular/Callout */
+font-family: "Univers Next for HSBC";
+font-size: var(--fontSize-Medium, 14px);
+font-style: normal;
+font-weight: var(--Regular, 400);
+line-height: var(--lineHeight-Medium, 18px); /* 128.571% */
+  }
+
+  .helperTextContainer {
+    width: 343px; /* Fill width */
+    height: 16px; /* Hug height */
+    gap: 8px; /* Gap (not needed for single child) */
+    opacity: 1; /* Set to visible */
+  }
